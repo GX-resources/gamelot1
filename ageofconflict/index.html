@@ -64,7 +64,7 @@
         dataUrl: buildUrl + "/v1.04.2w.data.unityweb",
         frameworkUrl: buildUrl + "/v1.04.2w.framework.js.unityweb",
         codeUrl: buildUrl + "/v1.04.2w.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
+        streamingAssetsUrl: new URL("StreamingAssets", document.baseURI).href, // document.URL is about:srcdoc here, so the loader's own new URL() throws on a relative value
         companyName: "JokuPelle",
         productName: "Ages of Conflict",
         productVersion: "1.04.2",
